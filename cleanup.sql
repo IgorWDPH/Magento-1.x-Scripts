@@ -1,0 +1,16 @@
+TRUNCATE dataflow_batch_export;
+TRUNCATE dataflow_batch_import;
+TRUNCATE log_customer;
+TRUNCATE log_quote;
+TRUNCATE log_summary;
+TRUNCATE log_summary_type;
+TRUNCATE log_url;
+TRUNCATE log_url_info;
+TRUNCATE log_visitor;
+TRUNCATE log_visitor_info;
+TRUNCATE log_visitor_online;
+TRUNCATE report_event;
+TRUNCATE report_viewed_product_index;
+TRUNCATE report_compared_product_index;
+TRUNCATE catalog_compare_item;
+DELETE FROM sales_flat_quote WHERE updated_at < DATE_SUB(Now(),INTERVAL 5 DAY);
